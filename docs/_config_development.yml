@@ -3,7 +3,6 @@ baseurl: /docs
 
 title: openapi and document sample
 description: testtest
-repository: openapi-test-public2
 
 # # --- を書かなくてもfront matterが設定されるようにする
 # plugins:
@@ -15,3 +14,29 @@ repository: openapi-test-public2
 #       path: "" # an empty string here means all files in the project
 #     values:
 #       layout: "default"
+
+# For meta data
+repository: cc-harashima/openapi-test--public2
+
+aux_links:
+  "openapi-test-public2 on GitHub":
+    - "https://github.com/cc-harashima/openapi-test-public2"
+
+nav_external_links:
+  - title: OpenApi viewer
+    url: ../openapi
+
+# back_to_top: true
+# back_to_top_text: "Back to top"
+
+# last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
+# last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html
+
+# For copy button on code
+# enable_copy_code_button: true
+
+# By default, consuming the theme as a gem leaves mermaid disabled; it is opt-in
+mermaid:
+  # Version of mermaid library
+  # Pick an available version from https://cdn.jsdelivr.net/npm/mermaid/
+  version: "9.1.6"
