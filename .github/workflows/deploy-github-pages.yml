@@ -24,6 +24,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      # - name: Setup Ruby
+      #   uses: ruby/setup-ruby@v1
+      #   with:
+      #     ruby-version: '3.1'
+      #     bundler-cache: true
+      #     cache-version: 0
+      #     working-directory: '${{ github.workspace }}/docs'
+
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
