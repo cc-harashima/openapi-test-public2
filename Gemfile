@@ -6,6 +6,6 @@ source "https://rubygems.org"
 
 group :development do
   gem "jekyll"
-  gem 'jekyll-optional-front-matter'
+  gem "jekyll-default-layout"
   gem "just-the-docs"
 end
