@@ -24,13 +24,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # - name: Setup Ruby
-      #   uses: ruby/setup-ruby@v1
-      #   with:
-      #     ruby-version: '3.1'
-      #     bundler-cache: true
-      #     cache-version: 0
-      #     working-directory: '${{ github.workspace }}/docs'
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+          bundler-cache: true
+          cache-version: 0
+          # working-directory: '${{ github.workspace }}/docs'
 
       - name: Install Node.js
         uses: actions/setup-node@v4
@@ -44,11 +44,14 @@ jobs:
       - name: Create output directory
         run: mkdir output
 
+      # - name: Build with Jekyll
+      #   uses: actions/jekyll-build-pages@v1
+      #   with:
+      #     source: docs
+      #     destination: output/docs
+
       - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: docs
-          destination: output/docs
+        run: bundle exec jekyll build -s docs -d output/docs
 
       - name: Generate Redoc HTML
         run: |
