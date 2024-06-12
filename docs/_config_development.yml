@@ -1,0 +1,17 @@
+theme: just-the-docs
+baseurl: /docs
+
+title: openapi and document sample
+description: testtest
+repository: openapi-test-public2
+
+# # --- を書かなくてもfront matterが設定されるようにする
+# plugins:
+#   - jekyll-optional-front-matter
+
+# # 全てのページにでlayout: "default"を設定する
+# defaults:
+#   - scope:
+#       path: "" # an empty string here means all files in the project
+#     values:
+#       layout: "default"

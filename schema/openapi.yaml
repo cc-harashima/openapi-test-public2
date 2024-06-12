@@ -1,0 +1,36 @@
+---
+openapi: 3.0.2
+info:
+  version: 1.0.0
+  title: test openapi
+  description: |
+    sample openapi document
+  contact:
+    name: example
+    email: example@example.com
+servers:
+- url: http://localhost:3000
+- url: http://localhost:3001
+tags:
+  - name: TestTag
+    description: test tag
+paths:
+  "/api/test":
+    get:
+      operationId: testId
+      description: test description
+      summary: test summary
+      tags:
+      - TestTag
+      parameters:
+      - name: id
+        in: query
+        description: ID
+        required: false
+        schema:
+          type: integer
+          format: int64
+          example: 1
+      responses:
+        '204':
+          description: 成功
