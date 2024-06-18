@@ -6,6 +6,10 @@ source "https://rubygems.org"
 
 group :development do
   gem "jekyll"
-  gem "jekyll-default-layout"
+  # テーマ利用のため
   gem "just-the-docs"
+  # just the docsのため
+  gem "jekyll-default-layout"
+  # リンクを自動変換するため .md → .html
+  gem 'jekyll-relative-links'
 end
